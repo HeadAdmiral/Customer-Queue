@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Micro Center -- Customer Queue</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <script src="javascript.js"></script>
+    <div class="banner"></div>
+    <img class="logo" src="https://i.imgur.com/0UA5Iiw.png" alt="Micro Center Logo">
+
+    <div class="columns">
+        <h1>Customer Queue</h1>
+        <div class="left">
+            <div class="queue">
+                <ul id="customerQueue">
+                    <li>Marge Arthur</li>
+                    <li>Arienne Kiaran</li>
+                    <li>Alecia Justin</li>
+                    <li>Valentine Florence</li>
+                    <li>Customer 5</li>
+                    <li>Customer 6</li>
+                    <li>Customer 7</li>
+                    <li>Customer 8</li>
+                    <li>Customer 9</li>
+                    <li>Customer 10</li>
+                </ul>
+            </div>
+
+            <div class="buttons">
+                <button type="button" onclick="showModal()">Join Queue</button>
+                <button type="button" name="btnNextCustomer" onclick="showNextCustomer()">Next Customer</button>
+            </div>
+        </div>
+
+
+
+        <div class="right">
+            <div class="nextCustomer">
+                <h1>Next Customer:</h1>
+                <h2 id="nextCustomer">customer_name</h2>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <form>
+        <div class="modal">
+            <input type="text" placeholder="Enter first name" required>
+            <br>
+            <input type="text" placeholder="Enter last name" required>
+            <br>
+            <button type="button">Submit</button>
+        </div>
+    </form>
+
+
+</body>
+</html>
