@@ -1,3 +1,1 @@
----
-layout: default
----
+placeholder in index.md
