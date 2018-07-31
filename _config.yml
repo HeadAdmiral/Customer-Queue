@@ -2,18 +2,18 @@
 # Author info #
 ###############
 
-author:
+#author:
     # Site's author name
     # Default: not set (author name is not displayed)
-    name: Your awesome name
+    # name: 
 
     # Site's author email
     # Default: not set (author email is not displayed)
-    email: your-email@yourdomain.com
+    # email: your-email@yourdomain.com
 
     # Site's author website, profile
     # Default: not set (author site is not displayed)
-    site: http://yourdomain.com
+    # site: http://yourdomain.com
 
 ############
 # Building #
@@ -166,7 +166,7 @@ enforce_https: "amastin-microcenter.github.io"
 # Base URL
 # Serve the website from the given base URL (does not include hostname)
 # Default: "" (website is at the root of the domain)
- baseurl: "/Customer-Queue"
+baseurl: "/Customer-Queue"
 
 # For more info on the serve command options, please refer to
 # http://jekyllrb.com/docs/configuration/
