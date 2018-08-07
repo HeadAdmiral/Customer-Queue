@@ -4,9 +4,11 @@
 @import "{{ site.theme }}";
 
 
+html, body {
+ height: 100%; 
+}
 
-
-.card-panel, .header-panel {
+.card-panel, .header-panel, .queue, .customer {
   padding: 24px;
   margin: .5rem 0 1rem 0;    
 }
@@ -29,5 +31,9 @@
   width: 20%;
   margin-left: 2rem;
   margin-top: 1rem;
+}
+
+.queue {
+  height: 100%;
 }
 
