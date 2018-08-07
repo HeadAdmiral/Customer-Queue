@@ -24,12 +24,23 @@ main {
   
 }
 
-.header-panel {
+header {
+  position: fixed;
+  width: 100%;
+}
+
+.header-panel, .next-customer, .customer, .customer-name {
   font-family: 'Product Sans', sans-serif;
+}
+
+.header-panel {
   background-color: #303f9f;
   color: white;
   padding: 24px;
   margin: .5rem 0 1rem 0;
+  z-index: 2;
+  margin-top: 0px;
+
 }
 
 .logo {
@@ -60,14 +71,20 @@ main {
 
 .next-customer {
   font-size: 48pt;
-  font-family: 'Product Sans';
 }
 
 .customer-name {
   font-size: 36pt;
-  font-family: 'Product Sans';
   font-style: italic;
   font-weight: 100;
   overflow-x: visible;
 }
+
+.header-logo {
+  background-color: white;
+  padding-bottom: 0px;
+  z-index: 1;
+}
+
+
 
