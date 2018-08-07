@@ -8,6 +8,10 @@ html, body {
   height: 100%; 
 }
 
+body {
+  overflow-y: hidden; 
+}
+
 main {
   background-color: #f7f7f7;
 }
@@ -44,6 +48,7 @@ main {
   margin-top: -16px;
   margin-bottom: 0;
   background-color: white;
+  overflow-y: scroll;
 }
 
 .customer-information {
