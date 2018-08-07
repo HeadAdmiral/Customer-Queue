@@ -48,12 +48,14 @@ main {
   margin-top: -16px;
   margin-bottom: 0;
   background-color: white;
-  overflow-y: scroll;
 }
 
 .customer-information {
-  float: right;
   width: 50%;
+  position: fixed;
+  left: 40%;
+  bottom: 55%;
+  text-align: center;
 }
 
 .customer {
@@ -70,5 +72,6 @@ main {
   font-family: 'Product Sans';
   font-style: italic;
   font-weight: 100;
+  overflow-x: visible;
 }
 
