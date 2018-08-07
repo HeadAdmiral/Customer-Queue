@@ -44,17 +44,18 @@ header {
 }
 
 .logo {
-  width: 15rem;
+  width: 13rem;
   margin-left: 2rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .queue {
-  padding-bottom: 100%;
+  padding-top: 11rem;
+  padding-bottom: 1%;
   width: 30%;
-  margin-top: -16px;
-  margin-bottom: 0;
+  margin-bottom: 0px;
   background-color: white;
+  z-index: 2;
 }
 
 .customer-information {
@@ -84,6 +85,7 @@ header {
   background-color: white;
   padding-bottom: 0px;
   z-index: 1;
+  margin-top: -1rem;
 }
 
 
