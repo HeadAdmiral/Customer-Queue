@@ -22,12 +22,15 @@
     </header>
 
     <main id="content" class="main-content" role="main">
-      <div class="card-panel">This is a card!</div>
-      <h1 class="next-customer">Next Customer:</h1>
-      <h2 class="customer-name">John Doe</h2>
+      <div class="queue">
+        <div class="customer">John Doe</div>
+        <div class="customer">Jane Doe</div>
+      </div>
       
-      
-      
+      <div class="customer-information">
+        <h1 class="next-customer">Next Customer:</h1>
+        <h2 class="customer-name">John Doe</h2>
+      </div>     
     </main>
 
     {% if site.google_analytics %}
