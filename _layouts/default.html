@@ -26,7 +26,7 @@
     </header>
 
     <main id="content" class="main-content" role="main">
-      <div class="queue">
+      <div id="queue" class="queue">
         <div class="customer">John Doe1</div>
         <div class="customer">John Doe2</div>
         <div class="customer">John Doe3</div>
@@ -39,7 +39,20 @@
       
       <div class="ui">
         <button class="button-rectangle">Next Customer</button>
-        <button id="add" class="material-icons" onclick="addCustomer()">add</i>
+        <button id="add" class="material-icons" onclick="showModal()">add</i>
+      </div>
+      
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="hideModal()">&times;</span>
+          <form id="form">
+            First Name:
+              <input type="text" id="firstname" name="firstname"><br>
+            Last Name:
+              <input type="text" id="lastname" name="lastname"><br>
+            <button id="submit" onclick="addCustomer()">Submit</button>
+          </form>  
+        </div>
       </div>
     </main>
 
