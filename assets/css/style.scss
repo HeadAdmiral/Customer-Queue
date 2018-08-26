@@ -118,6 +118,10 @@ header {
   border: none;
 }
 
+#add:focus {
+  outline: 0;
+}
+
 .material-icons {
   user-select: none;
 }
