@@ -1,5 +1,5 @@
 const queue = document.getElementById("queue");
-const modal = document.getElementById("modal");
+const modal = document.getElementById("myModal");
 const form = document.getElementById("form");
 
 function showModal() {
