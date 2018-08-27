@@ -27,4 +27,5 @@ function addCustomer(){
   customer.innerHTML = firstname + " " + lastname;
   
   queue.appendChild(customer);
+  console.log("added customer to queue");
 }
