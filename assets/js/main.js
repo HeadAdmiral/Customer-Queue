@@ -2,7 +2,7 @@ let queue;
 let modal;
 let form;
 
-document.onload = function(){
+window.onload = function(){
   queue = document.getElementById("queue");
   modal = document.getElementById("modal");
   form = document.getElementById("form");
