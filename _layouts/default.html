@@ -44,17 +44,18 @@
       
       <div id="modal" class="modal">
         <div class="modal-content">
+          <h2>Customer Queue</h2>
           <span class="close" onclick="hideModal()">&times;</span>
           <form id="form">
-            First Name:
-              <input type="text" id="firstname" name="firstname">
-            <br>
-            <br>
-            Last Name:
-              <input type="text" id="lastname" name="lastname">
-            <br>
-            <br>
-            <button class="button-rectangle-modal" onclick="addCustomer()">Submit</button>
+            <fieldset id="material">
+              First Name:
+                <input type="text" placeholder="John" autocomplete="off" required>
+              <hr>
+              Last Name:
+                <input type="text" placeholder="Doe" autocomplete="off" required>
+              <hr>
+              <button class="button-rectangle-modal" onclick="addCustomer()">Submit</button>
+            </fieldset>
           </form>  
         </div>
       </div>
