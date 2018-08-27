@@ -4,7 +4,6 @@ const form = document.getElementById("form");
 
 function showModal() {
   modal.style.display = "block";
-  console.log("Changed modal to block");
 }
 
 function hideModal() {
