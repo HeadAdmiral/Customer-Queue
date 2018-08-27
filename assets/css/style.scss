@@ -24,7 +24,13 @@ html, body {
   border-radius: 2px;
 }
 
-.button-rectangle:hover{
+.button-rectangle {
+    transition: 300ms;
+   -webkit-transition: 300ms;
+   -ms-transition: 300ms;
+}
+
+.button-rectangle:hover, #add:hover{
    box-shadow:0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
 }
 
