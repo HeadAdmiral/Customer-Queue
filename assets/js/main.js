@@ -6,6 +6,7 @@ document.onload = function(){
   queue = document.getElementById("queue");
   modal = document.getElementById("modal");
   form = document.getElementById("form");
+  console.log("elements updated");
 }
 
 function showModal() {
