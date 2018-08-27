@@ -1,6 +1,12 @@
-const queue = document.getElementById("queue");
-const modal = document.getElementById("modal");
-const form = document.getElementById("form");
+let queue;
+let modal;
+let form;
+
+document.onload = function(){
+  queue = document.getElementById("queue");
+  modal = document.getElementById("modal");
+  form = document.getElementById("form");
+}
 
 function showModal() {
   modal.style.display = "block";
