@@ -220,14 +220,21 @@ header {
 
 	label {
 		position: absolute;
-		top: 197px;
-		left: 45px;
 		font-size: 120%;
 		color: #E37F00;
 		transform-origin: 0 -150%;
 		transition: transform 300ms ease;
 		pointer-events: none;
 		font-family: 'Roboto', sans-serif;
+	}
+	#firstname {
+	  top: 197px;
+	  left: 45px;
+	}
+	
+	#lastname {
+	  top: 150px;
+	  left: 45px;
 	}
 	input:focus ~ label,
 	input:valid ~ label {
