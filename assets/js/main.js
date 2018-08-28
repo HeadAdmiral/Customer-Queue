@@ -1,15 +1,18 @@
 let queue;
 let modal;
 let form;
+let login;
 
 window.onload = function(){
   queue = document.getElementById("queue");
   modal = document.getElementById("modal");
+  login = document.getElementById("login-container");
   form = document.getElementById("form");
 }
 
 function showModal() {
   modal.style.display = "block";
+  login.style.display = "flex";
 }
 
 function hideModal() {
