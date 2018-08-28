@@ -60,10 +60,14 @@ $("button span").click(function(e){
 	circle.css({top: y+'px', left: x+'px'}).addClass("animate");
 })
 
-$("button").click(function(e){
-	console.log("Clicked a button.");
-})
+
 
 $("span").click(function(e){
 	console.log("Clicked a span.");
 })
+
+$( document ).ready(function() {
+    $("button").click(function(e){
+      console.log("Clicked a button.");
+    })
+});
