@@ -430,6 +430,10 @@ header {
   background: #FDAB43;
 }
 
+.login-button:focus {
+  outline: 0;
+}
+
 * {
   box-sizing: unset;
 }
