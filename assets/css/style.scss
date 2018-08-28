@@ -434,10 +434,6 @@ header {
   outline: 0;
 }
 
-.login > * {
-  box-sizing: unset;
-}
-
 fieldset {
   border: none;
 }
@@ -455,3 +451,6 @@ fieldset {
 	100% {opacity: 0; transform: scale(2.5);}
 }
 
+* {
+  box-sizing: unset;
+}
