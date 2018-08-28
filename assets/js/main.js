@@ -40,10 +40,10 @@ $( document ).ready(function() {
       parent = $(this).parent();
       self = $(this);
       //create .ink element if it doesn't exist
-      if(parent.find(".ink").length == 0)
-        parent.prepend("<span class='ink'></span>");
+      if(self.find(".ink").length == 0)
+        self.prepend("<span class='ink'></span>");
 
-      ink = parent.find(".ink");
+      ink = self.find(".ink");
       //incase of quick double clicks stop the previous animation
       ink.removeClass("animate");
 
