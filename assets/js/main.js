@@ -38,6 +38,7 @@ $( document ).ready(function() {
     var parent, ink, d, x, y;
     $("button").click(function(e){
       parent = $(this).parent();
+      self = $(this);
       //create .ink element if it doesn't exist
       if(parent.find(".ink").length == 0)
         parent.prepend("<span class='ink'></span>");
@@ -50,7 +51,7 @@ $( document ).ready(function() {
       if(!ink.height() && !ink.width())
       {
         //use parent's width or height whichever is larger for the diameter to make a circle which can cover the entire element.
-        d = Math.max(parent.outerWidth(), parent.outerHeight());
+        d = Math.max(self.outerWidth(), self.outerHeight());
         ink.css({height: d, width: d});
       }
 
