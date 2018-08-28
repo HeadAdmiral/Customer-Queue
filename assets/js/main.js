@@ -9,7 +9,7 @@ window.onload = function(){
 }
 
 function showModal() {
-  modal.style.display = "block";
+  modal.style.display = "flex";
 }
 
 function hideModal() {
