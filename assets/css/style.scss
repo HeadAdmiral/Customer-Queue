@@ -197,15 +197,15 @@ header {
 	hr {
 		content: '';
 		display: block;
-		position: absolute;
-		bottom: 0;
+		position: relative;
+		bottom: 2px;
 		left: 0;
 		margin: 0;
 		padding: 0;
 		width: 100%;
 		height: 2px;
 		border: none;
-		background: #607D8B;
+		background: #E37F00;
 		font-size: 1px;
 		will-change: transform, visibility;
 		transition: all 200ms ease-out;
@@ -220,13 +220,14 @@ header {
 
 	label {
 		position: absolute;
-		top: 10px;
-		left: 10px;
+		top: 197px;
+		left: 45px;
 		font-size: 120%;
-		color: #607D8B;
+		color: #E37F00;
 		transform-origin: 0 -150%;
 		transition: transform 300ms ease;
 		pointer-events: none;
+		font-family: 'Roboto', sans-serif;
 	}
 	input:focus ~ label,
 	input:valid ~ label {
