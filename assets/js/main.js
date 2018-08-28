@@ -38,7 +38,7 @@ function addCustomer(){
 
 var element, circle, d, x, y;
 $("button span").click(function(e){
-	console.log("Clicked");
+	console.log("Clicked a span in a button");
   
 	element = $(this);
   
@@ -58,4 +58,12 @@ $("button span").click(function(e){
 	y = e.pageY - element.offset().top - circle.height()/2;
 	
 	circle.css({top: y+'px', left: x+'px'}).addClass("animate");
+})
+
+$("button").click(function(e){
+	console.log("Clicked a button.");
+})
+
+$("span").click(function(e){
+	console.log("Clicked a span.");
 })
