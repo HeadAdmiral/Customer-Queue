@@ -37,7 +37,6 @@ function addCustomer(){
 $( document ).ready(function() {
     var element, circle, d, x, y;
     $("button span").click(function(e){
-      console.log("Clicked a span in a button");
 
       element = $(this);
 
