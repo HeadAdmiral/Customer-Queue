@@ -35,26 +35,31 @@ function addCustomer(){
 }
 
 $( document ).ready(function() {
-    var element, circle, d, x, y;
-    $("button span").click(function(e){
+    var parent, ink, d, x, y;
+    $("button").click(function(e){
+      parent = $(this).parent();
+      //create .ink element if it doesn't exist
+      if(parent.find(".ink").length == 0)
+        parent.prepend("<span class='ink'></span>");
 
-      element = $(this);
+      ink = parent.find(".ink");
+      //incase of quick double clicks stop the previous animation
+      ink.removeClass("animate");
 
-      if(element.find(".circle").length == 0)
-        element.prepend("<span class='circle'></span>");
-
-      circle = element.find(".circle");
-      circle.removeClass("animate");
-
-      if(!circle.height() && !circle.width())
+      //set size of .ink
+      if(!ink.height() && !ink.width())
       {
-        d = Math.max(element.outerWidth(), element.outerHeight());
-        circle.css({height: d, width: d});
+        //use parent's width or height whichever is larger for the diameter to make a circle which can cover the entire element.
+        d = Math.max(parent.outerWidth(), parent.outerHeight());
+        ink.css({height: d, width: d});
       }
 
-      x = e.pageX - element.offset().left - circle.width()/2;
-      y = e.pageY - element.offset().top - circle.height()/2;
+      //get click coordinates
+      //logic = click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center;
+      x = e.pageX - parent.offset().left - ink.width()/2;
+      y = e.pageY - parent.offset().top - ink.height()/2;
 
-      circle.css({top: y+'px', left: x+'px'}).addClass("animate");
+      //set the position and add class .animate
+      ink.css({top: y+'px', left: x+'px'}).addClass("animate");
     })
 });
