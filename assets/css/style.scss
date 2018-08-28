@@ -248,20 +248,6 @@ form {
 	}
 }
 
-html {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  min-height: 100%;
-  background: #F1F1F1;
-}
-
 /* Animation Keyframes */
 @keyframes scale_header {
   0%   {max-height: 0px; margin-bottom: 0px; opacity: 0;}
