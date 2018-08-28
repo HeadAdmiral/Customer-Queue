@@ -4,7 +4,7 @@ let form;
 
 window.onload = function(){
   queue = document.getElementById("queue");
-  modal = document.getElementById("modal");
+  modal = document.getElementById("login-container");
   form = document.getElementById("form");
 }
 
