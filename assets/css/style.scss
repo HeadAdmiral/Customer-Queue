@@ -434,7 +434,7 @@ header {
   outline: 0;
 }
 
-* {
+.login > * {
   box-sizing: unset;
 }
 
@@ -454,7 +454,6 @@ button{
     display: block; 
     position: relative;
     overflow: hidden;
-    padding: 20px;
     
     &:hover{cursor: pointer;}
   }
