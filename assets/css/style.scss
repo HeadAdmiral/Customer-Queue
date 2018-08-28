@@ -230,13 +230,13 @@ header {
 	#firstname {
 	  top: 197px;
 	  left: 45px;
-	  animation: text_opacity 1.5s cubic-bezier(.55, 0, .1, 1);
+	  animation: text_opacity 1.75s cubic-bezier(.55, 0, .1, 1);
 	}
 	
 	#lastname {
 	  top: 260px;
 	  left: 45px;
-	  animation: text_opacity 1.5s cubic-bezier(.55, 0, .1, 1);
+	  animation: text_opacity 1.75s cubic-bezier(.55, 0, .1, 1);
 	}
 	input:focus ~ label,
 	input:valid ~ label {
