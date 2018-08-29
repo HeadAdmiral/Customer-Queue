@@ -36,6 +36,7 @@ function addCustomer(){
 
 $(document).ready(function(e){
   $(".material").click(function(e) {
+	  console.log("Pressed");
     // Remove olds ones
     $(".ripple").remove();
 
