@@ -326,3 +326,10 @@ defaults:
 # For more info on YAML Front Matter and its configuration, please refer to
 # https://jekyllrb.com/docs/frontmatter/
 # https://jekyllrb.com/docs/configuration/#front-matter-defaults
+
+#####################
+# SASS #
+#####################
+
+sass:
+    sass_dir: _sass
