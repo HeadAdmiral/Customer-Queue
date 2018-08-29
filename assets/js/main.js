@@ -58,6 +58,10 @@ $( document ).ready(function() {
 
     // Get the center of the element
     var x = e.pageX - posX - buttonWidth / 2;
+	  if ($(this).hasClass('login-button')) {
+       x *= 2;
+    }
+	   
     var y = e.pageY - posY - buttonHeight / 2;
 
     // Add the ripples CSS and start the animation
