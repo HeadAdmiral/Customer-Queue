@@ -458,3 +458,214 @@ fieldset {
 * {
   box-sizing: unset;
 }
+
+@function shadow($z) {
+  @return 0px $z ($z * 2) rgba(black, 0.25), 0px 0px $z rgba(black, 0.125);
+}
+
+@keyframes ink-visual-show {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  
+  15% {
+    opacity: 1;
+  }
+  
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes ink-visual-hide {
+  from { }
+
+  to {
+    opacity: 0;
+  }
+}
+
+$accent: hsl(120, 100, 75);
+$ease: cubic-bezier(0.25, 0.5, 0.75, 1);
+$ease-out: cubic-bezier(0.25, 0.5, 0.5, 1);
+$ease-in: cubic-bezier(0.5, 0, 0.75, 0.5);
+
+button {
+  transition-duration: 0.2s;
+  transition-timing-function: $ease-out;
+  position: relative;
+  padding: 0;
+  height: auto;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  line-height: 1em;
+  text-transform: uppercase;
+  color: rgba(black, .73);
+
+  &:active {
+    transition-duration: 0s;
+  }
+
+  .btn {
+    position: relative;
+    padding: 8px 16px;
+    z-index: 2;
+  }
+
+  .ink-visual-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 2px;
+    z-index: 1;
+    
+    .ink-visual-static {
+      position: static;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 2px;
+    }
+    
+    .ink-visual {
+      animation: ink-visual-show 0.45s $ease-out;
+      animation-fill-mode: both;
+      transition-property: opacity;
+      transition-duration: 0.35s;
+      transition-timing-function: $ease-out;
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 1;
+      z-index: -1;
+      
+      &.hide {
+        opacity: 0;
+      }
+    }
+  }
+
+  &.raised, &.float {
+    $def-bkgd: hsl(105, 75, 40);
+    $hover-bkgd: mix($def-bkgd, white, 85);
+    $active-bkgd: hsl(105, 75, 37);
+    
+    transition-property: box-shadow, background;
+    background-color: $def-bkgd;
+    box-shadow: shadow(2px);
+    color: white;
+
+    &:hover {
+      box-shadow: shadow(4px);
+      background-color: $hover-bkgd;
+    }
+
+    &:active {
+      box-shadow: shadow(1px);
+      background-color: $active-bkgd;
+
+      html.ink-btn & {
+        background-color: $hover-bkgd;
+      }
+    }
+    
+    .ink-visual {
+      background-color: $active-bkgd;
+    }
+    
+    &.edge .ink-visual-static {
+      box-shadow: 0 1px 1px 0 rgba(white, .5) inset, 0 -1px 1px 0 rgba(black, .25) inset;
+    }
+  }
+
+  &.flat {
+    $active-bkgd: hsl(0, 0, 75);
+    
+    transition-property: background-color;
+    background: none;
+    color: hsl(120, 75, 35);
+    
+    &:active {
+      background-color: $active-bkgd;
+      
+      html.ink-btn & {
+        background: none;
+      }
+    }
+    
+    .ink-visual {
+      background-color: $active-bkgd;
+    }
+  }
+  
+  &.float {
+    $def-bkgd: hsl(30, 95, 50);
+    $hover-bkgd: hsl(30, 95, 57);
+    $active-bkgd: hsl(30, 95, 47);
+    
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 16px;
+    box-shadow: shadow(2px);
+    background-color: $def-bkgd;
+    
+    &:hover {
+      box-shadow: shadow(4px);
+      background-color: $hover-bkgd;
+    }
+    
+    &:active {
+      box-shadow: shadow(1px);
+      background-color: $active-bkgd;
+      
+      html.ink-btn & {
+        background-color: $hover-bkgd;
+      }
+    }
+    
+    .ink-visual-container {
+      border-radius: 50%;
+    }
+    
+    .ink-visual-static {
+      border-radius: 50%;
+    }
+    
+    .ink-visual {
+      background: $active-bkgd;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 4px;
+  padding: 4px;
+  background: white;
+  border-radius: 2px;
+  box-shadow: shadow(2px);
+  
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .hr {
+    margin: 4px -4px 3px;
+    border-bottom: 1px solid rgba(black, .15);
+  }
+}
+
+.right {
+  align-self: flex-end;
+}
