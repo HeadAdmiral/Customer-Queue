@@ -34,8 +34,8 @@ function addCustomer(){
   console.log("added customer to queue");
 }
 
-$(document).ready(function(e){
-  $(".material").click(function(e) {
+$( document ).ready(function() {
+    $(".material").click(function(e) {
 	  console.log("Pressed");
     // Remove olds ones
     $(".ripple").remove();
@@ -69,4 +69,3 @@ $(document).ready(function(e){
     }).addClass("rippleEffect");
 });
 });
-
