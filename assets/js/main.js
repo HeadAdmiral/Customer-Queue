@@ -58,6 +58,10 @@ $(document).ready(function() {
     // Get the center of the element
     var x = e.pageX - posX - buttonWidth / 2;
     var y = e.pageY - posY - buttonHeight / 2;
+      
+    console.log(e.pageX + " - " + posX + " - " + buttonWidth + " / " + 2 + " = " + x);
+    console.log(e.pageY + " - " + posY + " - " + buttonHeight + " / " + 2 + " = " + y);
+	    
 
     // Add the ripples CSS and start the animation
     $(".ripple").css({
