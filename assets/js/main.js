@@ -34,87 +34,38 @@ function addCustomer(){
   console.log("added customer to queue");
 }
 
-$(document).ready((function($, undefined) {
-  $("html").addClass("ink-btn");
+$(document).ready(function(e){
+  $(".material").click(function(e) {
+    // Remove olds ones
+    $(".ripple").remove();
 
-  var sqrt2 = Math.sqrt(2);
+    // Setup
+    var posX = $(this).offset().left,
+        posY = $(this).offset().top,
+        buttonWidth = $(this).width(),
+        buttonHeight = $(this).height();
 
-  function hypot(x, y) { return Math.sqrt((x * x) + (y * y)); }
+    // Add the element
+    $(this).prepend("<span class='ripple'></span>");
 
-  $("button").each(function(el) {
-    var self = $(this),
-        html = self.html();
-
-    self.html("").append($('<div class="btn"/>').html(html));
-  })
-  .append($('<div class="ink-visual-container"/>').append($('<div class="ink-visual-static"/>')))
-  
-  .on("select", function(evt) { event.preventDefault(); return false; })
-  .on("mousedown touchstart", function(evt) {
-    event.preventDefault();
-    
-    var self = $(this),
-        container = self.find(".ink-visual-static", true).eq(0);
-
-    if(!container.length) return;
-
-    container.find(".ink-visual").addClass("hide");
-    
-    var rect = this.getBoundingClientRect(),
-        cRect = container[0].getBoundingClientRect(),
-        cx, cy, radius, diam;
-
-        if (event.changedTouches) {
-          cx = event.changedTouches[0].clientX;
-          cy = event.changedTouches[0].clientY;
-        }
-        else {
-          cx = event.clientX;
-          cy = event.clientY;
-        }
-
-    if(self.is(".float")) {
-      var rx = rect.width / 2,
-          ry = rect.height / 2,
-          br = (rx + ry) / 2,
-          mx = rect.left + rx,
-          my = rect.top + ry;
-
-      radius = hypot(cx - mx, cy - my) + br;
+    // Make it round!
+    if (buttonWidth >= buttonHeight) {
+      buttonHeight = buttonWidth;
+    } else {
+      buttonWidth = buttonHeight;
     }
-    else {
-      var w = Math.max(cx - rect.left, rect.right - cx),
-          h = Math.max(cy - rect.top, rect.bottom - cy);
-      
-      radius = hypot(w, h);
-    }
-    diam = radius * 2;
-        
-    var el = $('<div class="ink-visual"/>').width(diam).height(diam)
-    .css("left", cx - cRect.left - radius).css("top", cy - cRect.top - radius)
-    
-    .on("animationend webkitAnimationEnd oanimationend MSAnimationEnd", function() {
-      var self2 = $(this);
 
-      switch(event.animationName) {
-        case "ink-visual-show":
-          self2.addClass("shown");
-          if (!self.is(":active")) self2.addClass("hide");
-          break;
+    // Get the center of the element
+    var x = e.pageX - posX - buttonWidth / 2;
+    var y = e.pageY - posY - buttonHeight / 2;
 
-        case "ink-visual-hide":
-          self2.remove();
-          break;
-      }
-    })
-    
-    .on("touchend", function() { event.preventDefault(); });
-
-    container.append(el);
-  });
-
-  $(window).on("mouseup touchend", function(evt) {
-    $(".ink-visual-static").children(".ink-visual").addClass("hide");
-  })
-  .on("select selectstart", function(evt) { event.preventDefault(); return false; });
+    // Add the ripples CSS and start the animation
+    $(".ripple").css({
+      width: buttonWidth,
+      height: buttonHeight,
+      top: y + 'px',
+      left: x + 'px'
+    }).addClass("rippleEffect");
 });
+});
+
