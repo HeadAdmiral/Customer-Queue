@@ -34,8 +34,8 @@ function addCustomer(){
   console.log("added customer to queue");
 }
 
-$( document ).ready(function() {
-    $("#add").click(function(e) {
+$(document).ready(function() {
+    $(".btn, #add").click(function(e) {
     // Remove olds ones
     $(".ripple").remove();
 
@@ -57,10 +57,6 @@ $( document ).ready(function() {
 
     // Get the center of the element
     var x = e.pageX - posX - buttonWidth / 2;
-	  if ($(this).hasClass('login-button')) {
-       x *= 2;
-    }
-	   
     var y = e.pageY - posY - buttonHeight / 2;
 
     // Add the ripples CSS and start the animation
