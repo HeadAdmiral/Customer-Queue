@@ -35,8 +35,7 @@ function addCustomer(){
 }
 
 $( document ).ready(function() {
-    $(".login-button, .btn, #add").click(function(e) {
-	  console.log("Pressed");
+    $("#add").click(function(e) {
     // Remove olds ones
     $(".ripple").remove();
 
