@@ -28,6 +28,10 @@ button, .button-rectangle, #add {
   transition: 300ms;
   -webkit-transition: 300ms;
   -ms-transition: 300ms;
+	padding: 10px;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 .button-rectangle:hover, #add:hover
