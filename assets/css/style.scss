@@ -411,6 +411,7 @@ header {
   opacity: 1;
   animation: input_opacity 0.8s cubic-bezier(.55, 0, .1, 1);
   transition: background 0.2s ease-in-out;
+  user-select: none;
 }
 
 .login-button.raised {
