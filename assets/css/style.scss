@@ -444,17 +444,17 @@ fieldset {
 
 .btn {
   display: inline-block;
-  width: 160px;
-  height: 60px;
   background: #39CCCC;
-  font-size: 16px;
   text-align: center;
-  line-height: 60px;
   color: #fff;
   text-transform: uppercase;
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  padding: 10px;
+  border-radius: 3px;
+  user-select: none;
+  font-family: 'Roboto', sans-serif;
 }
 
 .ripple {
