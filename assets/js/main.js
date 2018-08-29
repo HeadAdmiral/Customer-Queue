@@ -35,7 +35,7 @@ function addCustomer(){
 }
 
 $(document).ready(function() {
-    $(".btn, #add").click(function(e) {
+    $(".btn, #plus").click(function(e) {
     // Remove olds ones
     $(".ripple").remove();
 
