@@ -2,7 +2,7 @@
 ---
 
 @import "{{ site.theme }}";
-@import "_sass/button/mdc-button";
+@import "button";
 
 html, body {
   height: 100%; 
