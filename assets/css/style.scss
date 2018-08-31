@@ -110,7 +110,9 @@ header {
   margin-right: 4rem;
   border-style: solid;
   padding: 0 14px 0 14px;
-  border-width: 2px; 	
+  border-width: 2px;
+  color: #1e88e5;
+	background-color: var(--mdc-theme-primary, #1e88e5);
 }
 
 #add:focus {
