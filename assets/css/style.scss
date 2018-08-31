@@ -29,7 +29,8 @@ html, body {
 }
 
 #next-customer:active {
-  background-color: var(--mdc-theme-primary, #ffcc80);
+  background-color: var(--mdc-theme-primary, #ffa726);
+  transition: opacity 15ms linear;
 }
 
 button, .button-rectangle, #add {
