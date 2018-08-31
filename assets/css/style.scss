@@ -515,7 +515,7 @@ fieldset {
   .mdc-ripple-surface--test-edge-var-bug::before {
     border: var(--mdc-ripple-surface-test-edge-var); }
 
-.mdc-button, .mdc-button--raised, .mdc-button--outlined {
+.mdc-button, .mdc-button--raised {
   font-family: Roboto, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
