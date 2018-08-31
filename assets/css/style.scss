@@ -24,8 +24,12 @@ html, body {
   background-color: #ef6c00;
 }
 
-#next-customer::before, #next-customer::after {
-  background-color: var(--mdc-theme-primary, #ffb74d);
+#next-customer:hover {
+  background-color: var(--mdc-theme-primary, #f57c00);
+}
+
+#next-customer:active {
+  background-color: var(--mdc-theme-primary, #ffcc80);
 }
 
 button, .button-rectangle, #add {
