@@ -30,7 +30,8 @@ html, body {
 
 #next-customer:active {
   background-color: var(--mdc-theme-primary, #ffa726);
-  transition: opacity 15ms linear;
+  animation: input_opacity 0.8s cubic-bezier(.55, 0, .1, 1);
+  transition: background 0.2s ease-in-out;
 }
 
 button, .button-rectangle, #add {
