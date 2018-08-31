@@ -24,16 +24,6 @@ html, body {
   background-color: #ef6c00;
 }
 
-#next-customer:hover {
-  background-color: var(--mdc-theme-primary, #f57c00);
-}
-
-#next-customer:active {
-  background-color: var(--mdc-theme-primary, #ffa726);
-  animation: input_opacity 0.8s cubic-bezier(.55, 0, .1, 1);
-  transition: background 0.2s ease-in-out;
-}
-
 button, .button-rectangle, #add {
   overflow: hidden;
   outline: none;
@@ -545,13 +535,13 @@ fieldset {
   overflow: hidden;
   vertical-align: middle;
   border-radius: 2px; }
-  .mdc-button::before, .mdc-button::after {
+  .mdc-button::before, .mdc-button::after, .mdc-button--raised::before, .mdc-button--raised::after {
     position: absolute;
     border-radius: 50%;
     opacity: 0;
     pointer-events: none;
     content: ""; }
-  .mdc-button::before {
+  .mdc-button::before, .mdc-button--raised::before {
     transition: opacity 15ms linear;
     z-index: 1; }
   .mdc-button.mdc-ripple-upgraded::before {
@@ -610,14 +600,14 @@ fieldset {
       .mdc-button::before, .mdc-button::after {
         /* @alternate */
         background-color: var(--mdc-theme-primary, #6200ee); } }
-  .mdc-button:hover::before {
+  .mdc-button:hover::before, .mdc-button--raised::before {
     opacity: 0.04; }
   .mdc-button:not(.mdc-ripple-upgraded):focus::before, .mdc-button.mdc-ripple-upgraded--background-focused::before {
     transition-duration: 75ms;
     opacity: 0.12; }
-  .mdc-button:not(.mdc-ripple-upgraded)::after {
+  .mdc-button:not(.mdc-ripple-upgraded)::after, .mdc-button--raised:not(.mdc-ripple-upgraded):active::after {
     transition: opacity 150ms linear; }
-  .mdc-button:not(.mdc-ripple-upgraded):active::after {
+  .mdc-button:not(.mdc-ripple-upgraded):active::after, .mdc-button--raised:not(.mdc-ripple-upgraded):active::after {
     transition-duration: 75ms;
     opacity: 0.16; }
   .mdc-button.mdc-ripple-upgraded {
