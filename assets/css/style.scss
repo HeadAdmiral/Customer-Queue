@@ -115,7 +115,7 @@ header {
 
 }
 
-#add::before {
+#add::before, #add::after {
   background-color: var(--mdc-theme-primary, #1e88e5);
 }
 
