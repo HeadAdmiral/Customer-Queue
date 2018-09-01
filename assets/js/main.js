@@ -13,7 +13,8 @@ window.onload = function(){
 }
 
 function getNextCustomer() {
-  
+  nextCustomer = queue.firstChild.value;
+	console.log(nextCustomer);
 }
 
 function showModal() {
@@ -27,6 +28,7 @@ function hideModal() {
 
 function addCustomer(){
   console.log(queue);
+  getNextCustomer();
   
   let firstname = document.getElementById("fn-input").value;
   let lastname = document.getElementById("ln-input").value;
