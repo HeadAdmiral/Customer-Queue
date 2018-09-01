@@ -13,7 +13,7 @@ window.onload = function(){
   nextCustomer = document.getElementById("next-customer-name");
   nextCustomerTitle = document.getElementById("next-customer-title");
 	
-  $('#form').submit(function (e) {  
+  $("form").submit(function (e) {  
     e.preventDefault();
     addCustomer();	  
   });	
