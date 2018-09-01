@@ -54,17 +54,26 @@ function hideModal() {
 function addCustomer(){ 
   let firstname = document.getElementById("fn-input").value;
   let lastname = document.getElementById("ln-input").value;
+  let container = document.createElement("div");
+  let icon = document.createElement("i");
   let customer = document.createElement("div");
 	  
   hideModal();
 	
-	if (firstname != "" || lastname != "") {
+  if (firstname != "" || lastname != "") {
+    
+    // Create icon
+    icon.classList.add("material-icons");
+    icon.innerHTML = "account_circle";
+        
     // Create a customer div
     customer.classList.add("customer");
     customer.innerHTML = firstname + " " + lastname;
 
+    container.appendChild(icon);
+    container.appendChild(customer);
     // Add customer to the queue
-    queue.appendChild(customer);
+    queue.appendChild(container);
   }
   
   // Update next customer in line
