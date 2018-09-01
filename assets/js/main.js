@@ -22,7 +22,7 @@ window.onload = function(){
 function updateNextCustomer() {
   if (queue.childNodes.length > 1){
     nextCustomerTitle.innerText = "Next Customer:";
-    nextCustomer.innerText = queue.childNodes[1].innerText;
+    nextCustomer.innerText = queue.childNodes[1].innerText.replace("account_circle", "");
   }
   else{
     nextCustomerTitle.innerText = "No customers in queue.";
