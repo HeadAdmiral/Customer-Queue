@@ -13,7 +13,7 @@ window.onload = function(){
 }
 
 function getNextCustomer() {
-  nextCustomer = queue.childNodes;
+  nextCustomer = queue.childNodes[1].innerText;
   console.log(nextCustomer);
 }
 
