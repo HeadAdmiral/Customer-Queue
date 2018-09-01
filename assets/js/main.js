@@ -9,7 +9,7 @@ $(document).ready(function () {
   $('#main').submit(function (e) {
     e.preventDefault();
     addCustomer();	  
-  }
+  });
 }
 
 window.onload = function(){
