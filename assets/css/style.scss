@@ -4,7 +4,9 @@
 @import "{{ site.theme }}";
 
 @media screen and (min-width: 1440px) {
-    	
+  @viewport {
+    zoom: 1.0;
+  }
 }
 
 html, body {
