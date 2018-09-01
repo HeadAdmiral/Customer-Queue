@@ -3,6 +3,7 @@ let modal;
 let form;
 let login;
 let nextCustomer;
+let nextCustomerTitle;
 
 window.onload = function(){
   queue = document.getElementById("queue");
@@ -10,13 +11,16 @@ window.onload = function(){
   login = document.getElementById("login-container");
   form = document.getElementById("login-form");
   nextCustomer = document.getElementById("next-customer-name");
+  nextCustomerTitle = document.getElementById("next-customer-title");
 }
 
 function updateNextCustomer() {
   if (queue.childNodes.length >= 1){
+    nextCustomerTitle.innerText = "Next Customer:";
     nextCustomer.innerText = queue.childNodes[1].innerText;
   }
   else{
+    nextCustomerTitle.innerText = "No customers in queue.";
     nextCustomer.innerText = "";
   }
 }
