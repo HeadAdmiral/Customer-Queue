@@ -5,13 +5,6 @@ let login;
 let nextCustomer;
 let nextCustomerTitle;
 
-$(document).ready(function () {
-  $('#form').submit(function (e) {  
-    e.preventDefault();
-    addCustomer();	  
-  });
-});
-
 window.onload = function(){
   queue = document.getElementById("queue");
   modal = document.getElementById("modal");
@@ -19,6 +12,11 @@ window.onload = function(){
   form = document.getElementById("login-form");
   nextCustomer = document.getElementById("next-customer-name");
   nextCustomerTitle = document.getElementById("next-customer-title");
+	
+  $('#form').submit(function (e) {  
+    e.preventDefault();
+    addCustomer();	  
+  });	
 }
 
 function updateNextCustomer() {
