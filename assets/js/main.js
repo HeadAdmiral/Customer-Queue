@@ -54,7 +54,6 @@ function hideModal() {
 function addCustomer(){ 
   let firstname = document.getElementById("fn-input").value;
   let lastname = document.getElementById("ln-input").value;
-  let container = document.createElement("div");
   let icon = document.createElement("i");
   let customer = document.createElement("div");
 	  
@@ -68,12 +67,10 @@ function addCustomer(){
         
     // Create a customer div
     customer.classList.add("customer");
-    customer.innerHTML = firstname + " " + lastname;
+    customer.innerHTML = icon + " " + firstname + " " + lastname;
 
-    container.appendChild(icon);
-    container.appendChild(customer);
     // Add customer to the queue
-    queue.appendChild(container);
+    queue.appendChild(customer);
   }
   
   // Update next customer in line
