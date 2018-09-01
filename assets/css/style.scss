@@ -61,6 +61,7 @@ header {
   position: fixed;
   width: 100%;
   z-index: 3;
+  user-select: none;
 }
 
 .header-panel, .next-customer, .customer, .customer-name {
