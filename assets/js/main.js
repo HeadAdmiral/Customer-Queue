@@ -52,13 +52,15 @@ function addCustomer(){
   let customer = document.createElement("div");
 	  
   hideModal();
-  
-  // Create a customer div
-  customer.classList.add("customer");
-  customer.innerHTML = firstname + " " + lastname;
-  
-  // Add customer to the queue
-  queue.appendChild(customer);
+	
+	if (firstname != "" || lastname != "") {
+    // Create a customer div
+    customer.classList.add("customer");
+    customer.innerHTML = firstname + " " + lastname;
+
+    // Add customer to the queue
+    queue.appendChild(customer);
+  }
   
   // Update next customer in line
   updateNextCustomer();
