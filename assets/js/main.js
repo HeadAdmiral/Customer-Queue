@@ -69,7 +69,7 @@ function addCustomer(){
 	  
     // Create a customer div
     customer.classList.add("customer");
-    customer.innerHTML = "<i class='material-icons'>account_circle</i>" + " " + firstname + " " + lastname;
+    customer.innerHTML = "<i class='material-icons'>account_circle md-48</i>" + " " + firstname + " " + lastname;
 
     // Add customer to the queue	  
     queue.appendChild(customer);
