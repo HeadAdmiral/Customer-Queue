@@ -10,7 +10,7 @@ $(document).ready(function () {
     e.preventDefault();
     addCustomer();	  
   });
-}
+});
 
 window.onload = function(){
   queue = document.getElementById("queue");
