@@ -71,6 +71,7 @@ header {
   background-color: white;
   z-index: 2;
   position: fixed;
+  overflow: scroll;
 }
 
 .queue::after {
