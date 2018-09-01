@@ -73,6 +73,14 @@ header {
   position: fixed;
 }
 
+.queue::after {
+  z-index: 3;
+  background-image : linear-gradient(to bottom, 
+                    rgba(255,255,255, 0), 
+                    rgba(255,255,255, 1) 90%);
+  width: 100%;
+}
+
 .customer-information {
   width: 50%;
   position: fixed;
