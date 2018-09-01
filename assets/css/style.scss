@@ -21,17 +21,11 @@ html, body {
 }
 
 #next-customer {
-  background-color: #ef6c00;
-  transition: opacity 150ms linear;
+  color: #ef6c00;
 }
 
-#next-customer:hover::before {
-  opacity: 0.04;
-}
-
-#next-cusomter:active::after {
-  transition-duration: 75ms;
-  opacity: 0.16;
+#next-customer::before {
+  background-color: var(--mdc-theme-primary, #ef6c00);
 }
 
 button, .button-rectangle, #add {
