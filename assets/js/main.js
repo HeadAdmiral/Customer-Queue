@@ -64,13 +64,14 @@ function addCustomer(){
     // Create icon
     icon.classList.add("material-icons");
     icon.innerHTML = "account_circle";
-        
+    	  
+    console.log(icon);
+	  
     // Create a customer div
     customer.classList.add("customer");
     customer.innerHTML = firstname + " " + lastname;
 
-    // Add customer to the queue
-    queue.appendChild(icon);	  
+    // Add customer to the queue	  
     queue.appendChild(customer);
   }
   
