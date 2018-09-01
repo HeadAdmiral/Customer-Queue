@@ -2,6 +2,7 @@ let queue;
 let modal;
 let form;
 let login;
+let nextCustomer;
 
 window.onload = function(){
   queue = document.getElementById("queue");
@@ -9,6 +10,10 @@ window.onload = function(){
   login = document.getElementById("login-container");
   form = document.getElementById("form");
 	
+}
+
+function getNextCustomer() {
+  
 }
 
 function showModal() {
@@ -21,6 +26,8 @@ function hideModal() {
 }
 
 function addCustomer(){
+  console.log(queue);
+  
   let firstname = document.getElementById("fn-input").value;
   let lastname = document.getElementById("ln-input").value;
   let customer = document.createElement("div");
