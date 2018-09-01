@@ -13,8 +13,10 @@ window.onload = function(){
 }
 
 function getNextCustomer() {
-  nextCustomer = queue.childNodes[1].innerText;
-  console.log(nextCustomer);
+  if (queue.childNodes.length > 1){
+    nextCustomer = queue.childNodes[1].innerText;
+    console.log(nextCustomer);
+  }
 }
 
 function showModal() {
@@ -28,7 +30,7 @@ function hideModal() {
 
 function addCustomer(){
   console.log(queue);
-  getNextCustomer();
+  
   
   let firstname = document.getElementById("fn-input").value;
   let lastname = document.getElementById("ln-input").value;
@@ -44,4 +46,6 @@ function addCustomer(){
   
   queue.appendChild(customer);
   console.log("added customer to queue");
+  
+  getNextCustomer();
 }
