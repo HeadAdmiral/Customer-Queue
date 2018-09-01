@@ -11,9 +11,7 @@ window.onload = function(){
   login = document.getElementById("login-container");
   form = document.getElementById("login-form");
   nextCustomer = document.getElementById("next-customer-name");
-  nextCustomerTitle = document.getElementById("next-customer-title");
-	
-  console.log(form);	
+  nextCustomerTitle = document.getElementById("next-customer-title");	
 }
 
 function updateNextCustomer() {
