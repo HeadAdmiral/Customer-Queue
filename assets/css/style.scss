@@ -7,9 +7,6 @@
     .queue {
 	    min-height: 71rem;
 	}
-    .modal {
-      margin-top: -84rem;
-  }
 	
 }
 
@@ -147,6 +144,7 @@ header {
 
 .modal {
   display: none;
+  top: 0;
   padding-top: 20%;
   position: fixed;
   height: 70rem;
