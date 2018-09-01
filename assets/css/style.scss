@@ -10,7 +10,35 @@
   }
   
   .modal {
+    transform: scale(2);
+    padding-top: 50%;
+  }
+ 
+}
+
+@media screen and (max-width: 768px){
+  .ui {
+    width: 40%;
     transform: scale(1.5);
+    margin-right: 8rem;
+  }
+  
+  .modal {
+    transform: scale(2);
+    padding-top: 50%;
+  }
+ 
+}
+
+@media screen and (max-width: 1024px){
+  .ui {
+    width: 35%;
+    transform: scale(1.75);
+    margin-right: 16rem;
+  }
+  
+  .modal {
+    transform: scale(2);
     padding-top: 50%;
   }
  
