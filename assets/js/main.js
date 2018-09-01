@@ -13,8 +13,8 @@ window.onload = function(){
 }
 
 function getNextCustomer() {
-  nextCustomer = queue.firstChild.value;
-	console.log(nextCustomer);
+  nextCustomer = queue.firstChild;
+  console.log(nextCustomer);
 }
 
 function showModal() {
