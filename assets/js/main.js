@@ -16,10 +16,8 @@ window.onload = function(){
 
 function updateNextCustomer() {
   if (queue.childNodes.length > 1){
-	  if (nextCustomer.innerText != ""){
-      nextCustomerTitle.innerText = "Next Customer:";
-      nextCustomer.innerText = queue.childNodes[1].innerText;
-    }
+    nextCustomerTitle.innerText = "Next Customer:";
+    nextCustomer.innerText = queue.childNodes[1].innerText;
   }
   else{
     nextCustomerTitle.innerText = "No customers in queue.";
