@@ -20,11 +20,11 @@ html, body {
   
 }
 
-#next-customer {
+#next-customer, #submit {
   color: #ef6c00;
 }
 
-#next-customer::before, #next-customer::after {
+#next-customer::before, #next-customer::after, #submit::before, #submit::after {
   background-color: var(--mdc-theme-primary, #ef6c00);
 }
 
