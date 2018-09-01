@@ -6,7 +6,7 @@ let nextCustomer;
 let nextCustomerTitle;
 
 $(document).ready(function () {
-  $('#main').submit(function (e) {
+  $('#form').submit(function (e) {  
     e.preventDefault();
     addCustomer();	  
   });
