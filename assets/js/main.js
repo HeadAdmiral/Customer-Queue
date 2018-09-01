@@ -12,9 +12,16 @@ window.onload = function(){
   nextCustomer = document.getElementById("next-customer-name");
 }
 
-function getNextCustomer() {
-  if (queue.childNodes.length > 1){
+function updateNextCustomer() {
+  if (queue.childNodes.length >= 1){
     nextCustomer.innerText = queue.childNodes[1].innerText;
+  }
+}
+
+function getNextCustomer() {
+  if (queue.childNodes.length >= 1){
+    queue.removeChild(queue.childNodes[1]);
+    updateNextCustomer();
   }
 }
 
@@ -27,24 +34,23 @@ function hideModal() {
   modal.style.display = "none";
 }
 
-function addCustomer(){
-  console.log(queue);
-  
+function addCustomer(){ 
   let firstname = document.getElementById("fn-input").value;
   let lastname = document.getElementById("ln-input").value;
   let customer = document.createElement("div");
-	
-  console.log(firstname);
-	
-  
+	  
   hideModal();
   
+  // Create a customer div
   customer.classList.add("customer");
   customer.innerHTML = firstname + " " + lastname;
   
+  // Add customer to the queue
   queue.appendChild(customer);
-  console.log("added customer to queue");
   
-  getNextCustomer();
+  // Update next customer in line
+  updateNextCustomer();
+  
+  // Reset the form
   form.reset();
 }
