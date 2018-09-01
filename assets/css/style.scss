@@ -32,6 +32,14 @@ html, body {
   background-color: var(--mdc-theme-primary, #ef6c00);
 }
 
+#cancel {
+  color: #757575;
+}
+
+#cancel::before, #cancel::after {
+  background-color: var(--mdc-theme-primary, #bdbdbd);
+}
+
 
 button, .button-rectangle, #add {
   overflow: hidden;
