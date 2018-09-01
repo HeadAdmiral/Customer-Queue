@@ -8,13 +8,16 @@ window.onload = function(){
   queue = document.getElementById("queue");
   modal = document.getElementById("modal");
   login = document.getElementById("login-container");
-  form = document.getElementById("form");
+  form = document.getElementById("login-form");
   nextCustomer = document.getElementById("next-customer-name");
 }
 
 function updateNextCustomer() {
   if (queue.childNodes.length >= 1){
     nextCustomer.innerText = queue.childNodes[1].innerText;
+  }
+  else{
+    nextCustomer.innerText = "";
   }
 }
 
