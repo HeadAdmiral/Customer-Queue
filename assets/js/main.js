@@ -12,6 +12,8 @@ window.onload = function(){
   form = document.getElementById("login-form");
   nextCustomer = document.getElementById("next-customer-name");
   nextCustomerTitle = document.getElementById("next-customer-title");
+	
+  console.log(form);	
 }
 
 function updateNextCustomer() {
@@ -33,12 +35,17 @@ function getNextCustomer() {
 }
 
 function showModal() {
+  // Show the modal
   modal.style.display = "block";
   login.style.display = "flex";
 }
 
 function hideModal() {
+  // Hide the modal
   modal.style.display = "none";
+	
+  // Reset the form
+  form.reset();
 }
 
 function addCustomer(){ 
@@ -58,6 +65,5 @@ function addCustomer(){
   // Update next customer in line
   updateNextCustomer();
   
-  // Reset the form
-  form.reset();
+  
 }
