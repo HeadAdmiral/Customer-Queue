@@ -21,8 +21,8 @@ function hideModal() {
 }
 
 function addCustomer(){
-  let firstname = document.getElementById("fn-input");
-  let lastname = document.getElementById("ln-input");
+  let firstname = document.getElementById("fn-input").innerText;
+  let lastname = document.getElementById("ln-input").innerText;
   let customer = document.createElement("div");
 	
   console.log(firstname);
