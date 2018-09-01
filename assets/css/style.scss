@@ -22,6 +22,16 @@ html, body {
 
 #next-customer {
   background-color: #ef6c00;
+  transition: opacity 150ms linear;
+}
+
+#next-customer:hover::before {
+  opacity: 0.04;
+}
+
+#next-cusomter:active::after {
+  transition-duration: 75ms;
+  opacity: 0.16;
 }
 
 button, .button-rectangle, #add {
