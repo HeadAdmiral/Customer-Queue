@@ -5,13 +5,20 @@ let login;
 let nextCustomer;
 let nextCustomerTitle;
 
+$(document).ready(function () {
+  $('#main').submit(function (e) {
+    e.preventDefault();
+    addCustomer();	  
+  }
+}
+
 window.onload = function(){
   queue = document.getElementById("queue");
   modal = document.getElementById("modal");
   login = document.getElementById("login-container");
   form = document.getElementById("login-form");
   nextCustomer = document.getElementById("next-customer-name");
-  nextCustomerTitle = document.getElementById("next-customer-title");	
+  nextCustomerTitle = document.getElementById("next-customer-title");
 }
 
 function updateNextCustomer() {
