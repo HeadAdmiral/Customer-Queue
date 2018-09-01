@@ -67,9 +67,10 @@ function addCustomer(){
         
     // Create a customer div
     customer.classList.add("customer");
-    customer.innerHTML = icon + " " + firstname + " " + lastname;
+    customer.innerHTML = firstname + " " + lastname;
 
     // Add customer to the queue
+    queue.appendChild(icon);	  
     queue.appendChild(customer);
   }
   
