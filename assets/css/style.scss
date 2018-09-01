@@ -24,9 +24,10 @@ html, body {
   color: #ef6c00;
 }
 
-#next-customer::before {
+#next-customer::before, #next-customer::after {
   background-color: var(--mdc-theme-primary, #ef6c00);
 }
+
 
 button, .button-rectangle, #add {
   overflow: hidden;
