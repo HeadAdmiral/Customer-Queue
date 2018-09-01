@@ -3,6 +3,12 @@
 
 @import "{{ site.theme }}";
 
+@media screen and (min-width: 1440px) {
+    .queue {
+	    min-height: 71rem;
+	}
+}
+
 html, body {
   height: 100%; 
   background-color: #f7f7f7;
